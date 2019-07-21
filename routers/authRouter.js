@@ -21,3 +21,5 @@ router.get("/api/current_user", (req, res) => {
 });
 
 module.exports = router;
+
+

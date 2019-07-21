@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 
-require("./data/models/User"); // needs to be in this order. models before passport
+require("./data/models/User"); // *** needs to be in this order. models before passport
 require("./services/passport");
 const authRouter = require("./routers/authRouter");
 
