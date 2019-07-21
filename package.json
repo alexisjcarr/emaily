@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "npm install pm2 -g",
     "server": "nodemon index.js",
-    "start": "pm2-runtime index.js -i max"
+    "start": "pm2 start index.js -i max --watch"
   },
   "repository": {
     "type": "git",
