@@ -6,6 +6,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
+require("./data/models/User"); // needs to be in this order. models before passport
 require("./services/passport");
 const authRouter = require("./routers/authRouter");
 
