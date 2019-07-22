@@ -9,11 +9,17 @@ router.get(
   })
 );
 
-router.get("/auth/google/callback", passport.authenticate("google"));
+router.get(
+  "/auth/google/callback",
+  passport.authenticate("google"),
+  (req, res) => {
+    res.redirect("/surveys");
+  }
+);
 
 router.get("/api/logout", (req, res) => {
   req.logout();
-  res.send(req.user);
+  res.redirect("/");
 });
 
 router.get("/api/current_user", (req, res) => {
@@ -21,5 +27,3 @@ router.get("/api/current_user", (req, res) => {
 });
 
 module.exports = router;
-
-
