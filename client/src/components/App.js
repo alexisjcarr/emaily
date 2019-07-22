@@ -8,7 +8,7 @@ const Landing = () => <h2>Landing</h2>;
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Switch>
         <Route exact path="/" component={Landing} />
